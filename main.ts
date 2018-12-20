@@ -19,34 +19,58 @@ namespace projectImages {
     export const Boss_3 = image.ofBuffer(hex`e41010000000000000000000000000000000000000080000000000000088000090990900008808009099090080b88c8896990900808888880800000080888888969909008088888896990900808888880800000080b88c889699090000880800909909000088000090990900000800000000000000000000000000000000000000000000`);
 }
 
-function registerSprites(){
-    //let boySprite = sprites.create(projectImages.Boy)
-    let girlSprite = sprites.create(projectImages.Girl)
-    //let bossFinalSprite = sprites.create(projectImages.Boss_Final)
+enum Kind {
+    Girl,
+    Boss_1,
+    Chest
 }
+
 function introSequence() {
 
     game.showLongText("In a cube land far far away...", DialogLayout.Center)
-    game.showLongText("There was cubed lad and a cubed lady, living     happily    ever    after.", DialogLayout.Center)
+    game.showLongText("There was cubed lad and a cubed lady,      living     happily    ever      after.", DialogLayout.Center)
     music.baDing.play()
     //let girlSprite = sprites.create(projectImages.Girl)
     //girlSprite.
 }
 
-function levelOneSetup(){
-    //scene.setTileMap(image.ofBuffer(hex'999999999999999999...........b...99...............9...b.........9..............999..............389.........b....999.a............991..............999999999999999999')
-    //scene.setTile(9, sprite.create(projectImages.Border))
-    //scene.setTile()
+function levelOneSetup() {
+    scene.setTileMap(img`
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+9 . . . 9 5 . . . . . . 9 . . . . . . . . . 5 9
+9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9  
+9 . . . 9 . . . . . . . 9 . . . . 9 9 9 . . . 9 
+9 . . . 9 9 9 9 9 9 . . . . . . . . . . . . 9 9 
+9 . . . . . . . . . . . . . . . . . . . . . 3 6 
+9 . . . . . . . . . . . . . 9 . . 9 . . . . 9 9
+9 . . . 9 . . 9 . . . . . . 9 . . 9 . . . . . 9 
+9 . . . 9 . . 9 9 9 9 9 . . 9 . . 9 9 9 . . . 9 
+9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 
+9 5 . . 9 . . . . . . . . 5 9 . . . . . . . 5 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+`)
 }
-registerSprites()
+
+scene.onHitTile(, 3, function (sprite: Sprite) {
+    
+})
+//let boySprite = sprites.create(projectImages.Boy)
+let girlSprite = sprites.create(projectImages.Girl, Kind.Girl)
+//let bossFinalSprite = sprites.create(projectImages.Boss_Final)
+
 //introSequence()
-info.setBackgroundColor(8)
+scene.setBackgroundColor(7)
 levelOneSetup()
-
-
-
+scene.setTile(9, projectImages.Border, true)
+scene.setTile(3, projectImages.Boss_1)
+scene.setTile(6, projectImages.Door)
+scene.setTile(5, projectImages.Chest)
+girlSprite.setPosition(30, 30)
 girlSprite.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(girlSprite)
+
+let chestsCollected = 0
+
 scene.cameraFollowSprite(girlSprite);
 
 
