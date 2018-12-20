@@ -21,7 +21,7 @@ namespace projectImages {
 
 enum Kind {
     Girl,
-    Boss_1,
+    Boss,
     Chest
 }
 
@@ -34,25 +34,37 @@ function introSequence() {
     //girlSprite.
 }
 
-function levelOneSetup() {
+function levelsSetup() {
     scene.setTileMap(img`
-9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
-9 . . . 9 5 . . . . . . 9 . . . . . . . . . 5 9
-9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9  
-9 . . . 9 . . . . . . . 9 . . . . 9 9 9 . . . 9 
-9 . . . 9 9 9 9 9 9 . . . . . . . . . . . . 9 9 
-9 . . . . . . . . . . . . . . . . . . . . . 3 6 
-9 . . . . . . . . . . . . . 9 . . 9 . . . . 9 9
-9 . . . 9 . . 9 . . . . . . 9 . . 9 . . . . . 9 
-9 . . . 9 . . 9 9 9 9 9 . . 9 . . 9 9 9 . . . 9 
-9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 
-9 5 . . 9 . . . . . . . . 5 9 . . . . . . . 5 9 
-9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+. . . . . . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+. . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+. . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+. . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 
+. . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9   
+. . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9  
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . 9 . . . . 9 9 9 . . 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 9 9 9 9 9 . . . . . . . . . . . . . 6 . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . 9
+9 . . . . . . . . . . . . . . . . . . . . . . 6 . . . . . . . . . 9 . . . . . . . . . . . 9 9 . . . . . . . . 9  
+9 . . . . . . . . . . . . . 9 . . 9 . . . . 9 9 . . . . . . . . . 9 . . . . . . . . . . . 6 . . . . . . . . . 9  
+9 . . . . . . . . . . . . . 9 . . 9 . . . . . 9 . . . . . . . . . 9 . . . . . . . . . . . 6 . . . . . . . . . 9  
+9 . . . 9 . . 9 . . . . . . 9 . . 9 . . . . . 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9  
+9 . . . 9 . . 9 9 9 9 9 . . 9 . . 9 9 9 . . . 9 . . 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 . 3 6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 . . 6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 . . . 9 . . . . . . . . 5 9 . . . . . . . . 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
 `)
+    scene.setTile(9, projectImages.Border, true)
+    scene.setTile(6, projectImages.Door)
+    scene.setTile(3, projectImages.Boy)
+    girlSprite.setPosition(30, 128)
 }
 
-scene.onHitTile(, 3, function (sprite: Sprite) {
-    
+scene.onHitTile(Kind.Boss, 3, function (sprite: Sprite) {
+
 })
 //let boySprite = sprites.create(projectImages.Boy)
 let girlSprite = sprites.create(projectImages.Girl, Kind.Girl)
@@ -60,12 +72,8 @@ let girlSprite = sprites.create(projectImages.Girl, Kind.Girl)
 
 //introSequence()
 scene.setBackgroundColor(7)
-levelOneSetup()
-scene.setTile(9, projectImages.Border, true)
-scene.setTile(3, projectImages.Boss_1)
-scene.setTile(6, projectImages.Door)
-scene.setTile(5, projectImages.Chest)
-girlSprite.setPosition(30, 30)
+levelsSetup()
+
 girlSprite.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(girlSprite)
 
