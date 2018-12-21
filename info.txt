@@ -13,8 +13,28 @@
 #e5cdc4 - light brown
 #91463d - brown
 
+"palette": [
+        "#000000",
+        "#ffffff",
+        "#f7be12",
+        "#d278bc",
+        "#d278bc",
+        "#f7be12",
+        "#917155",
+        "#aed68d",
+        "#b695c9",
+        "#eacdb7",
+        "#648dc5",
+        "#7b7676",
+        "#b84949",
+        "#d8d4d4",
+        "#b84949",
+        "#000000"
+    ]
 
 new color pallete
+#000000
+#ffffff - white
 #d8d4d4 - light grey/white
 #7b7676 - grey
 #f7be12 - muted gold
@@ -27,6 +47,25 @@ new color pallete
 #eacdb7 - skin
 #648dc5 - blue
 #33a554 - green
+#000000
+#000000
+
+#000000
+#ffffff
+#d8d4d4
+#7b7676
+#f7be12
+#d67a23
+#d278bc
+#b84949
+#917155
+#aed68d
+#b695c9
+#eacdb7
+#648dc5
+#33a554
+#000000
+#000000
 
 
 
