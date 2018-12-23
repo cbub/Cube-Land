@@ -1,16 +1,16 @@
 namespace projectImages {
     //% fixedInstance
-    export const Boss_2 = image.ofBuffer(hex`e4101000000000000000000000000000f0ff0f0000f0ffffff550f0000ff4444f455ff0f004f444444554ffff04f4444445545f4f044111144554544f044111f44554544f044f11f44554544f044f11f44554544f04f4444445545f4004f444444554fff00ff4444f455ff0f00f0ffffff550f0000000000f0ff0f000000000000000000`);
+    export const Boss_2 = image.ofBuffer(hex`e4101000000000000000000000000000f0ff0f0000f0ffffff770f0000ff2222f277ff0f002f222222772ffff02f2222227727f2f022111122772722f022111f22772722f022f11f22772722f022f11f22772722f02f2222227727f2002f222222772fff00ff2222f277ff0f00f0ffffff770f0000000000f0ff0f000000000000000000`);
     //% fixedInstance
-    export const Boss_Final = image.ofBuffer(hex`e4101000ef0f000000000000eeff000000000000ffeeffffff0f0000f0eeefeeee0fffff00ffeeeeee0fffff00f0eeffe1ffff0f00f0efffe1feff0000efeeeeeefe0f0000efeeeeeefe0f0000f0efffe1feff0000f0eeffe1ffff0f00ffeeeeee0ffffff0eeefeeee0fffffffeeffffff0f0000eeff000000000000ef0f000000000000`);
+    export const Boss_Final = image.ofBuffer(hex`e41010005f0f00000000000055ff000000000000ff55ffffff0f0000f0555f55550fffff00ff5555550fffff00f055ff51ffff0f00f05fff51f5ff00005f555555f50f00005f555555f50f0000f05fff51f5ff0000f055ff51ffff0f00ff5555550ffffff0555f55550fffffff55ffffff0f000055ff0000000000005f0f000000000000`);
     //% fixedInstance
-    export const Boy = image.ofBuffer(hex`e410100000000000ff0f0000000000f066ff0000000000f066f60000ffffffff66f60000dfddddff66f6ff0fdf1fddfd666666ffdfffdddd666666f6dfdddddd666666f6dfdddddd666666f6dfffdddd666666f6df1fddfd666666ffdfddddff66f6ff0fffffffff66f60000000000f066f60000000000f066ff000000000000ff0f0000`);
+    export const Boy = image.ofBuffer(hex`e410100000000000ff0f0000000000f066ff0000000000f066f60000ffffffff66f60000cfccccff66f6ff0fcf1fccfc666666ffcfffcccc666666f6cfcccccc666666f6cfcccccc666666f6cfffcccc666666f6cf1fccfc666666ffcfccccff66f6ff0fffffffff66f60000000000f066f60000000000f066ff000000000000ff0f0000`);
     //% fixedInstance
     export const Chest_1 = image.ofBuffer(hex`e4101000ffffffffffffffffefeeeeefeeeeeefeefeeeeefceeceefeefccccefeecceefeefeefeffefceecfeefee5f55f5eeeefeefee5ff555efeefeefcc5ff55ff5eefeefee5ff55ff5ccfcefee5ff555cfeefeefee5f55f5eeeefeefccfeffefeeeefeefeecccfeeeeeefcefeeeeefeeccccfeefeeeeefeeeeeefeffffffffffffffff`);
     //% fixedInstance
-    export const Chest = image.ofBuffer(hex`e4101000ffffffffffffffffefeeeeefeeeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeefeefeffefeeeefeefee5f55f5eeeefeefee5ff555efeefeefee5ff55ff5eefeefee5ff55ff5eefeefee5ff555efeefeefee5f55f5eeeefeefeefeffefeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeffffffffffffffff`);
+    export const Chest = image.ofBuffer(hex`e4101000ffffffffffffffffefeeeeefeeeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeefeefeffefeeeefeefee7f77f7eeeefeefee7ff777efeefeefee7ff77ff7eefeefee7ff77ff7eefeefee7ff777efeefeefee7f77f7eeeefeefeefeffefeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeefeeeeefeeeeeefeffffffffffffffff`);
     //% fixedInstance
-    export const Flag = image.ofBuffer(hex`e4101000000000000000ffff0000000000005ff50000000000005ff5ffffffffffff5ff55f555555555555f55f555555555555f5ff555555f4ff5ff5f0555555ff005ff5f05f55450f005ff5005f55450f005ff5005f55f40f005ff500ff55f400005ff400f0550f00004ff400f05f0f0000ffff0000ff0f000000000000000000000000`);
+    export const Flag = image.ofBuffer(hex`e4101000000000000000ffff0000000000007ff70000000000007ff7ffffffffffff7ff77f777777777777f77f777777777777f7ff777777f2ff7ff7f0777777ff007ff7f07f77270f007ff7007f77270f007ff7007f77f20f007ff700ff77f200007ff200f0770f00002ff200f07f0f0000ffff0000ff0f000000000000000000000000`);
     //% fixedInstance
     export const Flower = image.ofBuffer(hex`e4101000005f55ff00000000005f33f50f000000005f7345ff00000000ff5544ff0f0000ffffff4f44ff00005ff5ffff44f4ff0f3f535f44ff4444ff3537354544444ff4353753f444ff44ff5f7335ffff44f40f5f33ff5f44f4ff00ff55ff3545ff0000f0ffff53f30f000000005f33550f000000005f37530f00000000ff5fff0f0000`);
     //% fixedInstance
@@ -25,8 +25,9 @@ namespace projectImages {
     export const Stone = image.ofBuffer(hex`e410100000ffffffffffff00f0dfddddddddfd0fffddd8d8d88dddffdf8ddfddfdddd8fddfdd888fddd8fdfd8f8dddddddddddfddfdfdfdddddd8ffddfddd88ddfd8ddfddfdddddddfdd8ffd8fdddddddd8dfdfddf8fd88ddfddd8fddfd8ddfd88ddddfddffdd8ddddffddfdffddfd8dd88dddfff0dfddddddddfd0f00ffffffffffff00`);
     //% fixedInstance
     export const Boss_1 = image.ofBuffer(hex`e4101000000000000000000000000000000000000000ffff0f00000000f0bbbbfb00000000bf1fbbbbffff0000bfffbbfbbbfb00f0bbffbb1bffff00f0bbbbbb1bf10000f0bbbbbb1bf10000f0bbffbb1bffff0000bfffbbfbbbfb0000bf1fbbbbffff0000f0bbbbfb0000000000ffff0f00000000000000000000000000000000000000`);
+    //% fixedInstance
+    export const Flower_2 = image.ofBuffer(hex`e41010000000fff70f00000000f07f77ff00000000f07766f700000000f07f76ff0f00000000ff4f44ff0000f0ffffff44f40f00ff774f444444ffff777647f4ff4444f47f6647fffffff4ff7f77f7ff4f44f400ff7ffff044f4ff0000ffffff44ff000000f07f47f40f000000f06776ff00000000f07f760f0000000000ffff0f000000`);
 }
-
 namespace palettes {
     //% fixedInstance
     export const palettehex = hex`000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`;
@@ -40,16 +41,31 @@ enum Kind {
 }
 
 function introSequence() {
-
-    game.showLongText("In a cube land far far away...", DialogLayout.Center)
-    game.showLongText("There was cubed lad and a cubed lady,      living     happily    ever      after.", DialogLayout.Center)
-    game.showLongText("But       everything changed  when the cube lords attacked.", DialogLayout.Center)
-    music.baDing.play()
-    //let girlSprite = sprites.create(projectImages.Girl)
-    //girlSprite.
+    game.showLongText("In a cube land far far away...", DialogLayout.Center);
+    game.showLongText("There was a cubed lad and a cubed lady,      living     happily    ever      after.", DialogLayout.Center);
+    let girl = sprites.create(projectImages.Girl.doubled());
+    let boy = sprites.create(projectImages.Boy.doubled());
+    scene.setBackgroundColor(9);
+    music.baDing.play();
+    girl.setPosition(50, 80);
+    boy.setPosition(110, 80);
+    game.waitAnyButton();
+    game.showLongText("But       everything changed  when the cube lord attacked.", DialogLayout.Center);
+    let boss = sprites.create(projectImages.Boss_Final.doubled());
+    boss.setPosition(120, 47);
+    game.waitAnyButton();
+    boss.vx = 22;
+    boy.vx = 22;
+    boss.vy = -22;
+    boy.vy = -22;
+    girl.say("No! Leave him alone!");
+    game.waitAnyButton();
+    game.splash("I have to find him!");
+    music.baDing.play();
 }
 
-function levelsSetup() {
+function level1Setup() {
+    scene.setBackgroundColor(9);
     scene.setTileMap(img`
         . . . . . . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
         . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . 9
@@ -68,7 +84,7 @@ function levelsSetup() {
         9 . . . 9 . . 9 . . . . . . 9 . . 9 . . . 2 . 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9
         9 . . . 9 . . 9 9 9 9 9 . . 9 . . 9 9 9 . . . 9 . . 9 4 . . . . . 9 . . . . 2 . . . . . . . . . . . . . . . . 9
         9 . 2 . 9 . . . . . . . . . 9 . . . . . . . . 9 . . 6 . . . . . . 9 . . . . . . . . . . . . . . 1 . . . . . . 9
-        9 . . . 9 . 1 . . . 2 . . . 9 . . 1 . . . . . 9 . . 6 . . . . . . 9 . . . . 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
+        9 . . . 9 . . . . . 2 . . . 9 . . 1 . . . . . 9 . . 6 . . . . . . 9 . . . . 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
         9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 9 9 9 4 . . . . . 9 . 1 . . . . . . . . . . 9 . . . . 9 . . . 9
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . 2 . . 9 . . . . . . . . . . . . 9 . . 2 . 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . 1 . . . . . . . 9 . . 9 9 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
@@ -89,107 +105,123 @@ function levelsSetup() {
         . . . . . . . . . . . . . . . . . . . . . . . 9 . 1 . . . . 2 . . . 1 . . . . . 9 . . 1 . . . . . . . . . 2 . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
-        `)
-    scene.setTile(9, projectImages.Stone, true)
-    scene.setTile(6, projectImages.Gate)
-    scene.setTile(3, projectImages.Boy)
-    scene.setTile(2, projectImages.Flower)
-    //scene.setTile(1, projectImages.Grass)
-    scene.setTile(4, projectImages.Flag)
-    boySprite.setPosition(398, 268)
-    girlSprite.setPosition(30, 200)
-    boss1Sprite.setPosition(355, 178)
-    bossFinalSprite.setPosition(445, 272)
-    boss2Sprite.setPosition(748, 206)
-    chest1Sprite.setPosition(96, 286)
-    chest2Sprite.setPosition(355, 126)
-    chest3Sprite.setPosition(355, 284)
-    chest4Sprite.setPosition(870, 30)
-    chest5Sprite.setPosition(870, 110)
-    chest6Sprite.setPosition(300, 30)
-    chest7Sprite.setPosition(624, 150)
-    chest8Sprite.setPosition(778, 520)
-    chest9Sprite.setPosition(720, 308)
-    chest10Sprite.setPosition(460, 482)
-    chest11Sprite.setPosition(864, 264)
-    chest12Sprite.setPosition(512, 256)
-
+        `);
+    scene.setTile(9, projectImages.Stone, true);
+    scene.setTile(6, projectImages.Gate);
+    scene.setTile(3, projectImages.Boy);
+    scene.setTile(2, projectImages.Flower);
+    scene.setTile(1, projectImages.Flower_2);
+    scene.setTile(4, projectImages.Flag);
+    boySprite.setPosition(398, 268);
+    girlSprite.setPosition(30, 200);
+    boss1Sprite.setPosition(355, 178);
+    bossFinalSprite.setPosition(445, 272);
+    boss2Sprite.setPosition(748, 206);
+    chest1Sprite.setPosition(96, 286);
+    chest2Sprite.setPosition(355, 126);
+    chest3Sprite.setPosition(355, 284);
+    chest4Sprite.setPosition(870, 30);
+    chest5Sprite.setPosition(870, 110);
+    chest6Sprite.setPosition(300, 30);
+    chest7Sprite.setPosition(624, 150);
+    chest8Sprite.setPosition(778, 520);
+    chest9Sprite.setPosition(720, 308);
+    chest10Sprite.setPosition(460, 482);
+    chest11Sprite.setPosition(864, 264);
+    chest12Sprite.setPosition(512, 256);
 }
 
 sprites.onOverlap(Kind.Girl, Kind.Boss, function (mainSprite, hitSprite) {
     if (hitSprite == boss1Sprite) {
         if (chestsCollected == 0) {
-            music.baDing.play()
-            boss1Sprite.destroy()
-            game.splash("You may pass!")
+            music.baDing.play();
+            boss1Sprite.destroy();
+            game.splash("You may pass!");
         }
         else {
-            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center)
-            girlSprite.setPosition(girlSprite.x - 5, girlSprite.y)
+            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
+            if (level == 1) {
+                 girlSprite.setPosition(girlSprite.x - 5, girlSprite.y);
+            }
         }
     }
     else if (hitSprite == boss2Sprite) {
         if (chestsCollected == 0) {
-            music.baDing.play()
-            boss2Sprite.destroy()
-            game.splash("You may pass!")
+            music.baDing.play();
+            boss2Sprite.destroy();
+            game.splash("You may pass!");
         }
         else {
-            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center)
-            girlSprite.setPosition(girlSprite.x + 5, girlSprite.y)
+            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
+            if (level == 1) {
+                girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+            }
         }
     }
     else {
         if (chestsCollected == 0) {
-            music.baDing.play()
-            bossFinalSprite.destroy()
-            game.splash("You may pass!")
+            music.baDing.play();
+            bossFinalSprite.destroy();
+            game.splash("You may pass!");
         }
         else {
-            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center)
-            girlSprite.setPosition(girlSprite.x + 5, girlSprite.y)
+            game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
+            if (level == 1) {
+                girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+            }
         }
     }
 })
 
 sprites.onOverlap(Kind.Girl, Kind.Chest, function (mainSprite, hitSprite) {
-    chestsCollected++
-    music.baDing.play()
-    hitSprite.destroy()
+    chestsCollected++;
+    music.baDing.play();
+    hitSprite.destroy();
 })
 
 sprites.onOverlap(Kind.Girl, Kind.Boy, function (mainSprite, hitSprite) {
-    music.baDing.play()
-    game.splash("You are reunited!")
-    game.showLongText("Your time to complete was: " + game.runtime() + "ms. Thanks for playing!", DialogLayout.Center)
+    music.baDing.play();
+    game.splash("You are reunited!");
+    game.showLongText("Your time to complete was: \n" + game.runtime() + "ms. Thanks for playing!", DialogLayout.Center);
+    info.changeScoreBy(1800000 /* 30 minutes */ - game.runtime());
+    game.over(true);
 })
 
-//introSequence()
 
-let boySprite = sprites.create(projectImages.Boy, Kind.Boy)
-let girlSprite = sprites.create(projectImages.Girl, Kind.Girl)
-let boss1Sprite = sprites.create(projectImages.Boss_1, Kind.Boss)
-let boss2Sprite = sprites.create(projectImages.Boss_2, Kind.Boss)
-let bossFinalSprite = sprites.create(projectImages.Boss_Final, Kind.Boss)
-let chest1Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest2Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest3Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest4Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest5Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest6Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest7Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest8Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest9Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest10Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest11Sprite = sprites.create(projectImages.Chest, Kind.Chest)
-let chest12Sprite = sprites.create(projectImages.Chest, Kind.Chest)
+introSequence();
 
-scene.setBackgroundColor(9)
-levelsSetup()
-let chestsCollected = 0
+let boySprite = sprites.create(projectImages.Boy, Kind.Boy);
+let girlSprite = sprites.create(projectImages.Girl, Kind.Girl);
+let boss1Sprite = sprites.create(projectImages.Boss_1, Kind.Boss);
+let boss2Sprite = sprites.create(projectImages.Boss_2, Kind.Boss);
+let bossFinalSprite = sprites.create(projectImages.Boss_Final, Kind.Boss);
+let chest1Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest2Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest3Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest4Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest5Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest6Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest7Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest8Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest9Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest10Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest11Sprite = sprites.create(projectImages.Chest, Kind.Chest);
+let chest12Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 
-girlSprite.setFlag(SpriteFlag.StayInScreen, true)
-controller.moveSprite(girlSprite)
+let level = Math.floor(Math.random() * 10)
+switch(level) {
+    case 1:
+        level1Setup();
+        break;
+    default:
+        level1Setup();
+}
+level1Setup();
+let chestsCollected = 0;
+
+
+girlSprite.setFlag(SpriteFlag.StayInScreen, true);
+controller.moveSprite(girlSprite);
 scene.cameraFollowSprite(girlSprite);
 
 
