@@ -1,5 +1,9 @@
 namespace projectImages {
     //% fixedInstance
+    export const House = image.ofBuffer(hex`e41010000000f0ff000000000000fff2ffffffff00f02fe2eeeeeefe00ff22e2ffefeefef02f22e21fefeefeff2222e2ffefeefe2f2222e2eeeeeefe2f2222e2feffffff2f2222e2fe2222f22f2222e2fe2222f2ff2222e2fe2227f2f02f22e2feffffff00ff22e2eeeeeefe00f02fe2eeeeeefe0000fff2ffffffff0000f0ff00000000`);
+    //% fixedInstance
+    export const House_1 = image.ofBuffer(hex`e41010000000f0ff000000000000fff4ffffffff00f04fe4eeeeeefe00ff44e4ffffeefef04f44e41ff1eefeff4444e41ff1eefe4f4444e41ff1eefe4f4444e4ffffeefe4f4444e4eeeeeefe4f4444e4eeeeeefe4f4444e4eeeeeefe4f4444e4ffffffff4f4444e44f4444f44f4444e44f4444f44f4444e44f4444f44f4444e44f4445f4`);
+    //% fixedInstance
     export const Boss_2 = image.ofBuffer(hex`e4101000000000000000000000000000f0ff0f0000f0ffffff770f0000ff2222f277ff0f002f222222772ffff02f2222227727f2f022111122772722f022111f22772722f022f11f22772722f022f11f22772722f02f2222227727f2002f222222772fff00ff2222f277ff0f00f0ffffff770f0000000000f0ff0f000000000000000000`);
     //% fixedInstance
     export const Boss_Final = image.ofBuffer(hex`e41010005f0f00000000000055ff000000000000ff55ffffff0f0000f0555f55550fffff00ff5555550fffff00f055ff51ffff0f00f05fff51f5ff00005f555555f50f00005f555555f50f0000f05fff51f5ff0000f055ff51ffff0f00ff5555550ffffff0555f55550fffffff55ffffff0f000055ff0000000000005f0f000000000000`);
@@ -45,10 +49,14 @@ function introSequence() {
     game.showLongText("There was a cubed lad and a cubed lady,      living     happily    ever      after.", DialogLayout.Center);
     let girl = sprites.create(projectImages.Girl.doubled());
     let boy = sprites.create(projectImages.Boy.doubled());
+    let house = sprites.create(projectImages.House_1.doubled());
+    let houseImage = projectImages.House_1.flipX();
+    let houseside = sprites.create( houseImage.doubled());
     scene.setBackgroundColor(9);
     music.baDing.play();
     girl.setPosition(50, 80);
     boy.setPosition(110, 80);
+    house.setPosition(30, 30);
     game.waitAnyButton();
     game.showLongText("But       everything changed  when the cube lord attacked.", DialogLayout.Center);
     let boss = sprites.create(projectImages.Boss_Final.doubled());
@@ -141,7 +149,7 @@ sprites.onOverlap(Kind.Girl, Kind.Boss, function (mainSprite, hitSprite) {
         else {
             game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
             if (level == 1) {
-                 girlSprite.setPosition(girlSprite.x - 5, girlSprite.y);
+                girlSprite.setPosition(girlSprite.x - 5, girlSprite.y);
             }
         }
     }
@@ -209,7 +217,7 @@ let chest11Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 let chest12Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 
 let level = Math.floor(Math.random() * 10)
-switch(level) {
+switch (level) {
     case 1:
         level1Setup();
         break;
