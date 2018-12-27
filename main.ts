@@ -1,8 +1,8 @@
 namespace projectImages {
     //% fixedInstance
-    export const House = image.ofBuffer(hex`e41010000000f0ff000000000000fff2ffffffff00f02fe2eeeeeefe00ff22e2ffefeefef02f22e21fefeefeff2222e2ffefeefe2f2222e2eeeeeefe2f2222e2feffffff2f2222e2fe2222f22f2222e2fe2222f2ff2222e2fe2227f2f02f22e2feffffff00ff22e2eeeeeefe00f02fe2eeeeeefe0000fff2ffffffff0000f0ff00000000`);
+    export const Gate_H = image.ofBuffer(hex`e410100000ffffffffffff00f0fff000000fff0fff0ff00ff00ff0ffff00ff0ff0ff00ffff00ff0000ff00fff00ff000000ff00ff0ff000ff000ff0ff0f00f0ff0f00f0ff0f00f0ff0f00f0ff0ff000ff000ff0ff00ff000000ff00fff00ff0000ff00ffff00ff0ff0ff00ffff0ff00ff00ff0fff0fff000000fff0f00ffffffffffff00`);
     //% fixedInstance
-    export const House_1 = image.ofBuffer(hex`e41010000000f0ff000000000000fff4ffffffff00f04fe4eeeeeefe00ff44e4ffffeefef04f44e41ff1eefeff4444e41ff1eefe4f4444e41ff1eefe4f4444e4ffffeefe4f4444e4eeeeeefe4f4444e4eeeeeefe4f4444e4eeeeeefe4f4444e4ffffffff4f4444e44f4444f44f4444e44f4444f44f4444e44f4444f44f4444e44f4445f4`);
+    export const House = image.ofBuffer(hex`e42020000000f0ff0000000000000000000000000000fff2ffffffff000000000000000000f02fe2eeeeeefe000000000000000000ff22e2eeeeeefe0000000000000000f02f22e2ffffeffe0000000000000000ff2222e21f11effe00000000000000002f2222e21f11effe00000000000000002f2222e2ffffeffe00000000000000002f2222e2eeeeeefe00000000000000002f2222e2eeeeeefe00000000000000002f2222e2eeeeeefe00000000000000002f2222e2ffffffff00000000000000002f2222e22f2222f200000000000000002f2222e22f2222f200000000000000002f2222e22f2222f200000000000000002f2222e22f2227f200000000000000002f2222e2ffffffff00000000000000002f2222e2eeeeeefe00000000000000002f2222e2eeeeeefe00000000000000002f2222e2eeeeeefe00000000000000002f2222e2ffffeffe00000000000000002f2222e21f11effe0000000000000000ff2222e21f11effe0000000000000000f02f22e2ffffeffe000000000000000000ff22e2eeeeeefe000000000000000000f02fe2eeeeeefe00000000000000000000fff2ffffffff00000000000000000000f0ff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`);
     //% fixedInstance
     export const Boss_2 = image.ofBuffer(hex`e4101000000000000000000000000000f0ff0f0000f0ffffff770f0000ff2222f277ff0f002f222222772ffff02f2222227727f2f022111122772722f022111f22772722f022f11f22772722f022f11f22772722f02f2222227727f2002f222222772fff00ff2222f277ff0f00f0ffffff770f0000000000f0ff0f000000000000000000`);
     //% fixedInstance
@@ -49,27 +49,29 @@ function introSequence() {
     game.showLongText("There was a cubed lad and a cubed lady,      living     happily    ever      after.", DialogLayout.Center);
     let girl = sprites.create(projectImages.Girl.doubled());
     let boy = sprites.create(projectImages.Boy.doubled());
-    let house = sprites.create(projectImages.House_1.doubled());
-    let houseImage = projectImages.House_1.flipX();
-    let houseside = sprites.create( houseImage.doubled());
+    let house = sprites.create(projectImages.House.doubled());
     scene.setBackgroundColor(9);
     music.baDing.play();
     girl.setPosition(50, 80);
     boy.setPosition(110, 80);
-    house.setPosition(30, 30);
+    house.setPosition(45, 40);
     game.waitAnyButton();
     game.showLongText("But       everything changed  when the cube lord attacked.", DialogLayout.Center);
     let boss = sprites.create(projectImages.Boss_Final.doubled());
     boss.setPosition(120, 47);
     game.waitAnyButton();
-    boss.vx = 22;
-    boy.vx = 22;
-    boss.vy = -22;
-    boy.vy = -22;
+    boss.vx = 25;
+    boy.vx = 25;
+    boss.vy = -25;
+    boy.vy = -25;
     girl.say("No! Leave him alone!");
     game.waitAnyButton();
     game.splash("I have to find him!");
     music.baDing.play();
+    girl.destroy();
+    house.destroy();
+    boy.destroy();
+    boss.destroy();
 }
 
 function level1Setup() {
@@ -79,7 +81,7 @@ function level1Setup() {
         . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . 9
         . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . 2 . . . . . . . . . . . 1 . . . . . 9 . . . . . . 9
         . . . . . . . . . . . . . . . . 9 . . 9 9 9 9 9 9 9 9 9 . . . . . 9 9 9 9 9 9 9 . . . . . 2 . . 9 . . . 2 . . 9
-        . . . . . . . . . . . . . . . . 9 . 2 . . . . . . . . 9 . . . . . 9 . . . . . . . . . . . . . . . . . . . . . 9
+        . 2 . . . . . 1 . . . . . . . . 9 . 2 . . . . . . . . 9 . . . . . 9 . . . . . . . . . . . . . . . . . . . . . 9
         . . . . . . . . . . . . . . . . 9 . . . . . . . . . . 9 . 1 . . . 9 . . . . . . . . . . . . . . . . . 9 9 9 9 9
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . 9 . . . . . 9 . . . 9 9 9 9 9 9 9 9 . . . . . . 9 . . . 9
         9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9 . . . . . . . . . 9 . . . 9 . . . . . . . . . . . . . 9 . . . 9
@@ -96,19 +98,19 @@ function level1Setup() {
         9 . . . 9 . . . . . . . . . 9 . . . . . . . . 9 9 9 9 4 . . . . . 9 . 1 . . . . . . . . . . 9 . . . . 9 . . . 9
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . 2 . . 9 . . . . . . . . . . . . 9 . . 2 . 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . 1 . . . . . . . 9 . . 9 9 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
-        . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . 9 . . . . . . . . . . . . . . . . . 9 . . 2 9
+        . . 1 . . . . . . 1 . . . . . . 2 . . . . . . 9 . . . . . . . . . 9 . . . . . . . . . . . . . . . . . 9 . . 2 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . 9 . . . 9
-        . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . . . . . 2 . . . 9 9 9 9 9 9 9 9 . . . 9 . . . 9
+        . . . . . . . . . . . . . . . . . . . . 1 . . 9 . . . 9 . . . . . . . . 2 . . . 9 9 9 9 9 9 9 9 . . . 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . . . . . . . . . 9 . . . . . . . . 1 . 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . 2 . 9 . . 1 . . . 9 9 9 9 9 9 9 . . . . . . . . . . 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . . . . . . . . . 9 . . . 9 9 9 9 9 9 9 9 . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . . . . 2 . . . . 9 . . . . . . . . . . . . . . 9
-        . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 9 9 9 9 9 . . . . . . . 9 . . . . . . . . . . . . . . 9
+        . . . . . . . . . . . . . . . . . . . . 1 . . 9 . . . 9 9 9 9 9 9 . . . . . . . 9 . . . . . . . . . . . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . 9 . . . . . . . 9 . . . 9 9 9 9 9 9 9 . . 2 . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . 9 . . . . . . . 9 . . . . . . . . . 9 . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . 1 . . 9 . . . . . . . 9 . . . . . . . . . 9 . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . 9 . . . . . 2 . 9 . . . . . 9 . . . 9 . . . . 9
-        . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . 9 . . . . . . . 9 . . . . . 9 . . . 9 . . . . 9
+        . . . . . . . . . . . . . . . . . . . . 2 . . 9 . . . 9 . . . . 9 . . . . . . . 9 . . . . . 9 . . . 9 . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . 9 . . . . 9 . . . . . . . 9 . . . . . 9 9 9 9 9 . . . . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . 1 . . . . 2 . . . 1 . . . . . 9 . . 1 . . . . . . . . . 2 . 9
         . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . 9
@@ -122,10 +124,78 @@ function level1Setup() {
     scene.setTile(4, projectImages.Flag);
     boySprite.setPosition(398, 268);
     girlSprite.setPosition(30, 200);
-    boss1Sprite.setPosition(355, 178);
+    boss1Sprite.setPosition(110, 296);
     bossFinalSprite.setPosition(445, 272);
     boss2Sprite.setPosition(748, 206);
-    chest1Sprite.setPosition(96, 286);
+    chest1Sprite.setPosition(30, 30);
+    chest2Sprite.setPosition(355, 126);
+    chest3Sprite.setPosition(355, 284);
+    chest4Sprite.setPosition(870, 30);
+    chest5Sprite.setPosition(870, 110);
+    chest6Sprite.setPosition(300, 30);
+    chest7Sprite.setPosition(624, 150);
+    chest8Sprite.setPosition(778, 520);
+    chest9Sprite.setPosition(720, 308);
+    chest10Sprite.setPosition(460, 482);
+    chest11Sprite.setPosition(864, 264);
+    chest12Sprite.setPosition(512, 256);
+}
+
+function level2Setup() {
+    scene.setBackgroundColor(9);
+    scene.setTileMap(img`
+        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . 9 . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . 9 . . . . . . . 1 . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . 2 . . . 9 9 9 9 9 9 . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . . . 9 . . . . 2 . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . 1 . 9 . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 9 9 9 9 . . . 9 . . . 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . 9 . . . . . . . 9 . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . 9 . . . 2 . . . 9 . . 2 . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . 9 . . . . . . . 9 . . . 9 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . 2 . 9 9 9 9 9 . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . . . . 2 . . . . 1 . . 9 . . 9 . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . 1 . . . . . . . . . . . 9 . . 9 . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        9 . . 9 . . . 9 . . . . . . 9 . . 9 . . . 2 . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+        9 . . 9 . . . 9 9 9 9 9 . . 9 . . 9 9 9 . . . 9 . . 9 4 . . . . . 9 . . . . 2 . . . . . . . . . . . . . . . . 9
+        9 . . 9 . . . . . . . . . . 9 . . . . . . . . 9 . . 6 . . . . . . 9 . . . . . . . . . . . . . . 1 . . . . . . 9
+        9 . . 9 . . . . . . 2 . . . 9 . . 1 . . . . . 9 . . 6 . . . . . . 9 . . . . 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
+        9 . . 9 . . 9 . . 9 . . . . 9 . . . . . . . . 9 9 9 9 4 . . . . . 9 . 1 . . . . . . . . . . 9 . . . . 9 . . . 9
+        9 9 9 9 9 9 9 7 7 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . 2 . . 9 . . . . . . . . . . . . 9 . . 2 . 9 . . . 9
+        9 . . . 9 . . . . . . . . . . . . . . . . . . 9 . 1 . . . . . . . 9 . . 9 9 9 9 9 9 9 9 9 9 9 . . . . 9 . . . 9
+        9 . . . 9 . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . 9 . . . . . . . . . . . . . . . . . 9 . . 2 9
+        9 . . . 9 . 1 . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . 9 . . . 9
+        9 . 2 . 9 . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . 2 . . . 9 9 9 9 9 9 9 9 . . . 9 . . . 9
+        9 . . . 9 . . . . . . . . . . . . . . . . 2 . 9 . . . . . . . . . . . . . . . . 9 . . . . . . . . 1 . 9 . . . 9
+        9 . . . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . 9 . 2 . 9 9 9 9 9 9 9 9 9 9 9 9 9 9 . . . . . . . . . . 9 . . . 9 
+        9 . . . 9 . . 9 . . . . . . . . . . . . . . . 9 . . . 9 . . . . . . . . . . . . 9 . . . 9 9 9 9 9 9 9 9 . . . 9
+        9 . . . 9 . . 9 . 1 . . . . . . . . . . 1 . . 9 9 9 9 9 . . . . . . . 2 . . . . . . . . . . . . . . . . . . . 9
+        9 . . . 9 . . 9 . . . . 9 . . . 9 . . . . . . . . . . 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . . . . 9
+        9 . . . . . . 9 . . . . 9 . . . 9 9 9 9 9 . . . . . . 9 . . . . 9 . . . . . . . 9 . . . 9 9 9 9 9 9 9 . . 2 . 9
+        9 . . 1 . . . 9 . . . . 9 . . . . . . . . . 2 . . . 9 9 . . . . 9 9 9 9 9 9 9 9 9 . . . . . . . . . 9 . . . . 9
+        9 . . . . . . 9 . . . . 9 . . . 2 . . . . . . . . . . 6 . 1 . . 9 . . . . . . . 9 . . . . . . . . . 9 . . . . 9
+        9 . . . . . . . . 2 . . 9 . . . . . . . . . . . . . . 6 . . . . 9 . . . . . 2 . 9 . . . . . 9 . . . 9 . . . . 9
+        9 . . . . . . . . . . . 9 9 9 9 9 9 9 9 9 9 9 . . . 9 9 . . . . 9 . . . 9 9 9 9 9 9 9 9 9 9 9 . . . 9 . . . . 9
+        9 9 9 9 9 9 9 9 . . . . . . . . . . . . . . . . . . . 9 . . . . 9 . . . . . . . . . . . . . 9 9 9 9 9 . . . . 9
+        9 . . . . . . . . . . . . . 2 . . . . . . . . . . 1 . 9 . . 2 . . . 1 . . . . . . . . 1 . . . . . . . . . 2 . 9
+        9 . . . . . . . . . . . . . . . . . . . . . . . . . . 9 . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+        9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+        `);
+    scene.setTile(9, projectImages.Stone, true);
+    scene.setTile(6, projectImages.Gate);
+    scene.setTile(7, projectImages.Gate_H)
+    scene.setTile(3, projectImages.Boy);
+    scene.setTile(2, projectImages.Flower);
+    scene.setTile(1, projectImages.Flower_2);
+    scene.setTile(4, projectImages.Flag);
+    boySprite.setPosition(398, 268);
+    girlSprite.setPosition(30, 200);
+    boss1Sprite.setPosition(130, 292);
+    bossFinalSprite.setPosition(445, 272);
+    boss2Sprite.setPosition(748, 206);
+    chest1Sprite.setPosition(30, 30);
     chest2Sprite.setPosition(355, 126);
     chest3Sprite.setPosition(355, 284);
     chest4Sprite.setPosition(870, 30);
@@ -148,21 +218,33 @@ sprites.onOverlap(Kind.Girl, Kind.Boss, function (mainSprite, hitSprite) {
         }
         else {
             game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
-            if (level == 1) {
-                girlSprite.setPosition(girlSprite.x - 5, girlSprite.y);
+            boss1Sprite.say("You have collected " + chestsCollected.toString() + " out of 3.", 5000);
+            switch (level) {
+                case 1: case 2: case 3: case 4:
+                    girlSprite.setPosition(girlSprite.x - 5, girlSprite.y);
+                    break;
+                default:
+                    girlSprite.setPosition(girlSprite.x, girlSprite.y - 5);
+                    break;
             }
         }
     }
     else if (hitSprite == boss2Sprite) {
-        if (chestsCollected == 0) {
+        if (chestsCollected == 4) {
             music.baDing.play();
             boss2Sprite.destroy();
             game.splash("You may pass!");
         }
         else {
             game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
-            if (level == 1) {
-                girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+            boss2Sprite.say("You have collected " + (chestsCollected - 3).toString() + " out of 4.", 5000);
+            switch (level) {
+                case 1: case 2: case 3: case 4:
+                    girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+                    break;
+                default:
+                    girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+                    break;
             }
         }
     }
@@ -174,8 +256,14 @@ sprites.onOverlap(Kind.Girl, Kind.Boss, function (mainSprite, hitSprite) {
         }
         else {
             game.showLongText("Collect all the chests to pay the toll.", DialogLayout.Center);
-            if (level == 1) {
-                girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+            boss2Sprite.say("You have collected " + (chestsCollected - 7).toString() + " out of 5.", 5000);
+            switch (level) {
+                case 1: case 2: case 3: case 4:
+                    girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+                    break;
+                default:
+                    girlSprite.setPosition(girlSprite.x + 5, girlSprite.y);
+                    break;
             }
         }
     }
@@ -216,15 +304,17 @@ let chest10Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 let chest11Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 let chest12Sprite = sprites.create(projectImages.Chest, Kind.Chest);
 
-let level = Math.floor(Math.random() * 10)
+//let level = Math.floor(Math.random() * 10)
+let level = 5;
 switch (level) {
-    case 1:
+    case 1: case 2: case 3: case 4:
         level1Setup();
         break;
     default:
-        level1Setup();
+        level2Setup();
+        break;
 }
-level1Setup();
+
 let chestsCollected = 0;
 
 
